@@ -8,7 +8,7 @@ A real-time data pipeline that ingests RSS feeds through Kafka Connect, processe
 
 Building real-time GenAI applications requires complex data pipelines that connect diverse source systems to vector databases. Traditional approaches force developers to write extensive custom code for ETL processes and embedding pipelines, handling numerous pain points including type conversions, field filtering, timestamp parsing, null value management, and data transformation. The complexity multiplies when dealing with dedicated compute resources, parallel processing, request throttling, and scheduling for embedding generation. Additionally, scheduled batch-based ETL pipelines introduce significant delays to insights, creating a lag between data availability and actionable intelligence. This creates a maintenance nightmare where teams constantly ask "Who's gonna maintain it?" while struggling with brittle custom code that's difficult to scale and migrate. 
 
-The solution requires "shifting left" - processing and acting on data as it arrives in real-time rather than waiting for batch processing cycles. This approach shortens the time to value and enables immediate insights for AI applications.
+The solution requires "shifting left" - processing and acting on data as it arrives in real-time rather than waiting for batch processing cycles. This approach shortens the time to value and enables immediate insights for AI applications. By leveraging Free and Open Source Software (FOSS) tools with built-in capabilities, this project demonstrates how to subsume traditional ETL and embedding pipelines, practically removing the need to code or maintain complex data processing infrastructure.
 
 ## Architecture
 
