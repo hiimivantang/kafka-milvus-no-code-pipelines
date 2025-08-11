@@ -10,6 +10,8 @@ Building real-time GenAI applications requires complex data pipelines that conne
 
 ## Architecture
 
+![Architecture](images/architecture.png)
+
 This project creates a no-code data pipeline that:
 - Ingests RSS feeds using Kafka Connect RSS Source Connector
 - Processes data through Kafka topics
