@@ -219,3 +219,12 @@ Once the pipeline is running, RSS feed data will be continuously:
 4. Stored in Milvus for vector similarity search
 
 You can then query the Milvus collection for semantic search across news articles.
+
+## Credits
+
+This project builds upon the following open source components:
+
+- [Milvus](https://github.com/milvus-io/milvus) - The vector database that powers semantic search capabilities
+- [Confluent Platform All-in-One](https://github.com/confluentinc/cp-all-in-one) - Docker Compose setup for Confluent Platform
+- [Zilliz Kafka Connect Milvus](https://github.com/zilliztech/kafka-connect-milvus) - Kafka Connect sink connector for Milvus
+- [Kaliy Kafka Connect RSS](https://github.com/kaliy/kafka-connect-rss) - Kafka Connect source connector for RSS feeds
