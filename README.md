@@ -2,6 +2,12 @@
 
 A real-time data pipeline that ingests RSS feeds through Kafka Connect, processes them with built-in embedding functions, and stores them in Milvus vector database for GenAI applications.
 
+## Problem Statement
+
+![Problem Statement](images/problem_statement.png)
+
+Building real-time GenAI applications requires complex data pipelines that connect diverse source systems to vector databases. Traditional approaches force developers to write extensive custom code for ETL processes and embedding pipelines, handling numerous pain points including type conversions, field filtering, timestamp parsing, null value management, and data transformation. The complexity multiplies when dealing with dedicated compute resources, parallel processing, request throttling, and scheduling for embedding generation. This creates a maintenance nightmare where teams constantly ask "Who's gonna maintain it?" while struggling with brittle custom code that's difficult to scale and migrate. The solution often leads to developers wanting to "shift left" - moving away from complex, hard-to-maintain implementations toward declarative, no-code approaches.
+
 ## Architecture
 
 This project creates a no-code data pipeline that:
