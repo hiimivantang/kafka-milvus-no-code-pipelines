@@ -18,12 +18,30 @@ This project creates a no-code data pipeline that:
 
 ## Getting Started
 
-### 1. Start Docker Services
+### 1. Configure Milvus with OpenAI API Key
 
-Navigate to the `cp-all-in-one/` directory and spin up all services:
+Before starting services, configure Milvus with your OpenAI API key for embedding functions:
 
 ```bash
 cd cp-all-in-one/
+cp sample_milvus.yaml milvus.yaml
+```
+
+Edit `milvus.yaml` and replace `<INSERT_YOUR_API_KEY>` with your actual OpenAI API key:
+
+```yaml
+proxies:
+  default:
+    credential:
+      openai_key:
+        apikey: your-actual-openai-api-key-here
+```
+
+### 2. Start Docker Services
+
+Spin up all services:
+
+```bash
 docker-compose up -d
 ```
 
@@ -35,7 +53,7 @@ This will start:
 - Milvus vector database
 - MinIO (object storage for Milvus)
 
-### 2. Create Kafka Topic
+### 3. Create Kafka Topic
 
 Run the topic creation script:
 
@@ -45,7 +63,7 @@ Run the topic creation script:
 
 This creates a `test_topic` for RSS feed data.
 
-### 3. Set Up Milvus Collection
+### 4. Set Up Milvus Collection
 
 Create the Milvus collection with schema and embedding functions:
 
@@ -59,7 +77,7 @@ This script:
 - Sets up OpenAI embedding function for automatic text vectorization
 - Configures vector index for similarity search
 
-### 4. Deploy Connectors
+### 5. Deploy Connectors
 
 Start the RSS source connector:
 
