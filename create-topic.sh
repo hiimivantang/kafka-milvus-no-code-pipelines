@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/Users/ivantang/confluent-7.9.1/bin/confluent kafka topic create test_topic --url http://localhost:8082 --no-authentication
+docker run --rm -it --network cp-all-in-one_default apache/kafka /opt/kafka/bin/kafka-topics.sh --create --topic test_topic --bootstrap-server broker:29092
