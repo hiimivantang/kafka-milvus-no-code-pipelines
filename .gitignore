@@ -2,3 +2,4 @@
 milvus.yaml
 volumes/
 .DS_Store
+*.swp
