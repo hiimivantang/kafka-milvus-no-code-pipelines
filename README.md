@@ -27,8 +27,7 @@ This project creates a no-code data pipeline that:
 ## Prerequisites
 
 - Docker and Docker Compose
-- Python 3.x with pymilvus library
-- Confluent CLI (for topic creation)
+- Python 3.x with pymilvus==2.6.0
 
 ## Getting Started
 
