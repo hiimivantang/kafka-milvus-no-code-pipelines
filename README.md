@@ -71,7 +71,7 @@ This will start:
 Run the topic creation script:
 
 ```bash
-./create_topic.sh
+./02-create-topic.sh
 ```
 
 This creates a `test_topic` for RSS feed data.
@@ -81,7 +81,7 @@ This creates a `test_topic` for RSS feed data.
 Create the Milvus collection with schema and embedding functions:
 
 ```bash
-python create-milvus-collection.py
+python 01-create-milvus-collection.py
 ```
 
 This script:
@@ -95,13 +95,13 @@ This script:
 Start the RSS source connector:
 
 ```bash
-./submit-rss-connector.sh
+./04-submit-rss-connector.sh
 ```
 
 Then deploy the Milvus sink connector:
 
 ```bash
-./submit-milvus-sink-connector.sh
+./05-submit-milvus-sink-connector.sh
 ```
 
 ## Data Flow
@@ -120,7 +120,7 @@ Then deploy the Milvus sink connector:
 
 ## Connector Configurations
 
-### RSS Source Connector (`submit-rss-connector.sh`)
+### RSS Source Connector (`04-submit-rss-connector.sh`)
 
 The RSS source connector uses a declarative JSON configuration that defines data ingestion and transformation:
 
@@ -194,7 +194,7 @@ The connector applies three sequential transformations:
 - Expects ISO 8601 format from RSS feeds
 - Outputs Kafka Connect Timestamp type for compatibility
 
-### Milvus Sink Connector (`submit-milvus-sink-connector.sh`)
+### Milvus Sink Connector (`05-submit-milvus-sink-connector.sh`)
 
 The sink connector configuration handles data flow from Kafka to Milvus:
 
